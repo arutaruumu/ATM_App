@@ -1,5 +1,5 @@
 class Customer:
-    def init(self, id, custPin = 1234, custBalance = 10000):
+    def __init__(self, id, custPin = 1234, custBalance = 10000):
         self.id = id
         self.pin = custPin
         self.balance = custBalance
@@ -9,7 +9,7 @@ class Customer:
         return self.pin
     def checkBalance(self):
         return self.balance
-    def withdrawBalance(self):
-        self.balance = nominal
-    def depositBalance(self):
-        self.balance = nominal
+    def withdrawBalance(self, nominal):
+        self.balance -= nominal
+    def depositBalance(self, nominal):
+        self.balance += nominal
